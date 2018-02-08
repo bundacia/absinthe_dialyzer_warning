@@ -1,5 +1,7 @@
 defmodule AbsintheDialyzerWarning do
   use Absinthe.Schema
+  # Uncomment the following line to silence the dialyzer warning
+  # @dialyzer {:nowarn_function, __do_absinthe_middleware__: 3}
 
   object :person do
     field :name, :string
