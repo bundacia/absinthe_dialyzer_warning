@@ -22,7 +22,8 @@ defmodule AbsintheDialyzerWarning.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:absinthe, "~> 1.4"},
+      # {:absinthe, "~> 1.4"},
+      {:absinthe, git: "git@github.com:bundacia/absinthe.git", branch: "fix_dialyzer_warning"},
       {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
     ]
   end
