@@ -13,6 +13,14 @@ defmodule AbsintheDialyzerWarning do
 
   @impl Absinthe.Schema
   def middleware(middleware, _, _) do
-    middleware
+    middleware ++ [PassThroughMiddleware]
+  end
+end
+
+defmodule PassThroughMiddleware do
+  @behaviour Absinthe.Middleware
+
+  def call(res, _config) do
+    res
   end
 end
